@@ -34,7 +34,7 @@ const mixins = chance => {
    * @param {Number} max The maximum of the range
    * @return {Number} The random unique number
    */
-  const uniqueNumberGenerator = ({ min = 1, max = 9999999 } = {}) => {
+  const uniqueNumberGenerator = ({ min = 1, max = Infinity } = {}) => {
     let cache = []
     return ({ reset = false } = {}) => {
       if (reset) cache = []
