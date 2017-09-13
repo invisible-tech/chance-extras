@@ -29,6 +29,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "jsdoc": "^3.4.3",
+    "lodash": "^4.17.4",
     "mocha": "^3.2.0",
     "nsp": "^2.6.3",
     "nyc": "^10.3.0",
@@ -50,9 +51,6 @@
     "@invisible/logger": "^0.0.3",
     "avow": "^4.0.1",
     "chance": "^1.0.6",
-    "common-tags": "^1.4.0",
-    "dotenv": "^4.0.0",
-    "lodash": "^4.17.4",
     "moment": "^2.18.1"
   }
 }
