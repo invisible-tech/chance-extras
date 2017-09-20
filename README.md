@@ -18,5 +18,4 @@ uniqueNumber({ reset: true })
 
 ```
 
-See [mixins.spec.js](./test/specs/mixins.spec.js) for a full list of all mixins and how they are used
-
+See [mixins.spec.js](./test/specs/mixins.spec.js) for a full list of all mixins and how they are used.
