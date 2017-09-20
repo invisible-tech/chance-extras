@@ -48,7 +48,6 @@
     "test-only": "NODE_ENV=test nyc mocha test/helpers/loadMocks.js $(find test -name '*.spec.js')"
   },
   "dependencies": {
-    "@invisible/logger": "^0.0.3",
     "avow": "^4.0.1",
     "chance": "^1.0.6",
     "moment": "^2.18.1"
