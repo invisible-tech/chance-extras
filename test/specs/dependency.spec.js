@@ -5,8 +5,6 @@ const path = require('path')
 const recursiveReaddir = require('recursive-readdir')
 const { forEach } = require('lodash/fp')
 
-require('~/test/testHelper')
-
 const ROOT_DIR = path.join(__dirname, '../..')
 
 describe('dependencies', () => {
