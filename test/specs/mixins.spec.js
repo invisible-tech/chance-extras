@@ -8,7 +8,7 @@ const {
   startsWith,
 } = require('lodash/fp')
 
-const chance = require('~/src/index')
+const chance = require('../../src')
 
 describe('chanceMixins', () => {
   describe('uniqueWordGenerator', () => {
