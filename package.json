@@ -41,7 +41,6 @@
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
     "fix": "eslint --cache --fix scripts src test",
     "lint": "eslint --cache -f node_modules/eslint-formatter-pretty scripts src test",
-    "postinstall": "scripts/postinstall.sh",
     "prepublish": "nsp check",
     "pretest": "yarn run lint",
     "test": "yarn run test-only",
@@ -50,6 +49,7 @@
   "dependencies": {
     "avow": "^4.0.1",
     "chance": "^1.0.6",
-    "moment": "^2.18.1"
+    "moment": "^2.18.1",
+    "wavy": "^1.0.4"
   }
 }
