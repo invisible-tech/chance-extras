@@ -35,11 +35,10 @@
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
     "fix": "eslint --cache --fix scripts src test",
     "lint": "eslint --cache -f node_modules/eslint-formatter-pretty scripts src test",
-    "prepublish": "nsp check",
     "pretest": "yarn run lint",
     "test": "yarn run test-only",
     "test-only": "NODE_ENV=test nyc mocha test/helpers/loadMocks.js $(find test -name '*.spec.js')",
-    "posttest": "assert-version-bump"
+    "posttest": "assert-version-bump && nsp check"
   },
   "dependencies": {
     "avow": "^4.0.1",
