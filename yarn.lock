@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@invisible/assert@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@invisible/assert/-/assert-1.0.1.tgz#1bcf7da0e68a82e5b4c23bd5a88233f7845d2c9a"
+  dependencies:
+    parse-function "^5.0.7"
+
 "@invisible/eslint-config@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@invisible/eslint-config/-/eslint-config-1.0.0.tgz#526b6654f40386665cc9561144f8d5ee0cd0a882"
@@ -164,12 +170,6 @@ ast-types-flow@0.0.7:
 async@^1.4.0:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
-
-avow@^4.0.1:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/avow/-/avow-4.0.3.tgz#4e64d285e713393dbec0585d0b16f0696721eaab"
-  dependencies:
-    parse-function "^5.0.7"
 
 axobject-query@^0.1.0:
   version "0.1.0"

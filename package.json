@@ -1,7 +1,7 @@
 {
   "name": "@invisible/chance-extras",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "Singleton Chance, plus some mixins",
   "engines": {
     "node": "8.5.0"
@@ -41,7 +41,6 @@
     "posttest": "assert-version-bump && nsp check"
   },
   "dependencies": {
-    "avow": "^4.0.1",
     "chance": "^1.0.6",
     "moment": "^2.18.1"
   }

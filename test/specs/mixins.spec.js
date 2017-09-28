@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const {
   includes,
   intersection,
@@ -17,7 +17,7 @@ describe('chanceMixins', () => {
       const cache = []
       for (let i = 0; i <= 15; i++) {
         const word = uniqueWord()
-        avow(! (includes(word, cache)), 'outputted non-unique word')
+        assert(! (includes(word, cache)), 'outputted non-unique word')
         cache.push(word)
       }
     })
@@ -27,7 +27,7 @@ describe('chanceMixins', () => {
       const cache = []
       for (let i = 0; i <= 15; i++) {
         const word = uniqueWord()
-        avow(! (includes(word, cache)), 'outputted non-unique word')
+        assert(! (includes(word, cache)), 'outputted non-unique word')
         cache.push(word)
       }
 
@@ -35,11 +35,11 @@ describe('chanceMixins', () => {
       uniqueWord({ reset: true })
       for (let i = 0; i <= 15; i++) {
         const word = uniqueWord()
-        avow(! (includes(word, cache2)), 'outputted non-unique word')
+        assert(! (includes(word, cache2)), 'outputted non-unique word')
         cache2.push(word)
       }
 
-      avow(intersection(cache)(cache2).length > 0)
+      assert(intersection(cache)(cache2).length > 0)
     })
   })
 
@@ -49,7 +49,7 @@ describe('chanceMixins', () => {
       const cache = []
       for (let i = 0; i <= 9; i++) {
         const number = uniqueNumber()
-        avow(! (includes(number, cache)), 'outputted non-unique number')
+        assert(! (includes(number, cache)), 'outputted non-unique number')
         cache.push(number)
       }
     })
@@ -59,7 +59,7 @@ describe('chanceMixins', () => {
       const cache = []
       for (let i = 0; i <= 8; i++) {
         const number = uniqueNumber()
-        avow(! (includes(number, cache)), 'outputted non-unique number')
+        assert(! (includes(number, cache)), 'outputted non-unique number')
         cache.push(number)
       }
 
@@ -67,11 +67,11 @@ describe('chanceMixins', () => {
       uniqueNumber({ reset: true })
       for (let i = 0; i <= 8; i++) {
         const number = uniqueNumber()
-        avow(! (includes(number, cache2)), 'outputted non-unique number')
+        assert(! (includes(number, cache2)), 'outputted non-unique number')
         cache2.push(number)
       }
 
-      avow(intersection(cache)(cache2).length > 0)
+      assert(intersection(cache)(cache2).length > 0)
     })
   })
 
@@ -89,91 +89,91 @@ describe('chanceMixins', () => {
 
     it('alphaNumeric', async () => {
       const alphaNumeric = chance.alphaNumeric(12)
-      avow.strictEqual(alphaNumeric.length, 12)
-      avow(isAlphaNumeric(alphaNumeric))
-      avow(isAlphaNumeric(chance.alphaNumeric()))
+      assert.strictEqual(alphaNumeric.length, 12)
+      assert(isAlphaNumeric(alphaNumeric))
+      assert(isAlphaNumeric(chance.alphaNumeric()))
     })
 
     it('numeric', async () => {
       const numeric = chance.numeric(12)
-      avow.strictEqual(numeric.length, 12)
-      avow(isNumeric(numeric))
-      avow(isNumeric(chance.numeric()))
+      assert.strictEqual(numeric.length, 12)
+      assert(isNumeric(numeric))
+      assert(isNumeric(chance.numeric()))
     })
 
     it('slackChannelId', () => {
       const slackChannelId = chance.slackChannelId()
-      avow(startsWith('C')(slackChannelId))
-      avow.strictEqual(slackChannelId.length, 9)
+      assert(startsWith('C')(slackChannelId))
+      assert.strictEqual(slackChannelId.length, 9)
     })
 
     it('slackUserId', () => {
       const slackUserId = chance.slackUserId()
-      avow(startsWith('U')(slackUserId))
-      avow.strictEqual(slackUserId.length, 9)
+      assert(startsWith('U')(slackUserId))
+      assert.strictEqual(slackUserId.length, 9)
     })
 
     it('slackGroupId', () => {
       const slackGroupId = chance.slackGroupId()
-      avow(startsWith('G')(slackGroupId))
-      avow.strictEqual(slackGroupId.length, 9)
+      assert(startsWith('G')(slackGroupId))
+      assert.strictEqual(slackGroupId.length, 9)
     })
 
     it('slackChannelName', () => {
       const slackChannelName = chance.slackChannelName()
-      avow(slackChannelName.length, 21)
+      assert(slackChannelName.length, 21)
     })
 
     it('slackFileId', () => {
       const slackFileId = chance.slackFileId()
-      avow(startsWith('F')(slackFileId))
-      avow.strictEqual(slackFileId.length, 9)
+      assert(startsWith('F')(slackFileId))
+      assert.strictEqual(slackFileId.length, 9)
     })
 
     it('slackTeamId', () => {
       const slackTeamId = chance.slackTeamId()
-      avow(startsWith('T')(slackTeamId))
-      avow.strictEqual(slackTeamId.length, 9)
+      assert(startsWith('T')(slackTeamId))
+      assert.strictEqual(slackTeamId.length, 9)
     })
 
     it('slackTs', () => {
       const slackTs = chance.slackTs()
       const pieces = slackTs.split('.')
-      avow.strictEqual(pieces.length, 2)
-      avow(isNumeric(pieces[0]))
-      avow(isNumeric(pieces[1]))
+      assert.strictEqual(pieces.length, 2)
+      assert(isNumeric(pieces[0]))
+      assert(isNumeric(pieces[1]))
     })
 
     it('slackBotToken', () => {
       const slackBotToken = chance.slackBotToken()
       const pieces = slackBotToken.split('-')
-      avow.strictEqual(pieces.length, 3)
-      avow.strictEqual(pieces[0], 'xoxb')
-      avow(isNumeric(pieces[1]))
-      avow.strictEqual(pieces[1].length, 11)
-      avow(isAlphaNumeric(pieces[2]))
-      avow.strictEqual(pieces[2].length, 24)
+      assert.strictEqual(pieces.length, 3)
+      assert.strictEqual(pieces[0], 'xoxb')
+      assert(isNumeric(pieces[1]))
+      assert.strictEqual(pieces[1].length, 11)
+      assert(isAlphaNumeric(pieces[2]))
+      assert.strictEqual(pieces[2].length, 24)
     })
 
     it('slackOauthToken', () => {
       const slackOauthToken = chance.slackOauthToken()
       const pieces = slackOauthToken.split('-')
-      avow.strictEqual(pieces.length, 5)
-      avow.strictEqual(pieces[0], 'xoxb')
-      avow(isNumeric(pieces[1]))
-      avow.strictEqual(pieces[1].length, 11)
-      avow(isNumeric(pieces[2]))
-      avow.strictEqual(pieces[2].length, 11)
-      avow(isNumeric(pieces[3]))
-      avow.strictEqual(pieces[3].length, 12)
-      avow(isAlphaNumeric(pieces[4]))
-      avow.strictEqual(pieces[4].length, 32)
+      assert.strictEqual(pieces.length, 5)
+      assert.strictEqual(pieces[0], 'xoxb')
+      assert(isNumeric(pieces[1]))
+      assert.strictEqual(pieces[1].length, 11)
+      assert(isNumeric(pieces[2]))
+      assert.strictEqual(pieces[2].length, 11)
+      assert(isNumeric(pieces[3]))
+      assert.strictEqual(pieces[3].length, 12)
+      assert(isAlphaNumeric(pieces[4]))
+      assert.strictEqual(pieces[4].length, 32)
     })
 
     it('upperAlphaNumeric', async () => {
       const upperAlphaNumeric = chance.upperAlphaNumeric(12)
-      avow.strictEqual(upperAlphaNumeric.length, 12)
-      avow(isUpperAlphaNumeric(upperAlphaNumeric))
+      assert.strictEqual(upperAlphaNumeric.length, 12)
+      assert(isUpperAlphaNumeric(upperAlphaNumeric))
     })
   })
 })

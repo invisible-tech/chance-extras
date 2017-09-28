@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const path = require('path')
 const recursiveReaddir = require('recursive-readdir')
 const { forEach } = require('lodash/fp')
@@ -27,6 +27,6 @@ describe('dependencies', () => {
   })
 
   it('should have found some files', () =>
-    avow(jsFiles.length > 0, 'no files found!')
+    assert(jsFiles.length > 0, 'no files found!')
   )
 })
