@@ -1,7 +1,7 @@
 {
   "name": "@invisible/chance-extras",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Singleton Chance, plus some mixins",
   "engines": {
     "node": "8.5.0"
@@ -19,6 +19,7 @@
   "keywords": [],
   "devDependencies": {
     "@invisible/eslint-config": "^1.0.0",
+    "@invisible/publish": "^1.1.1",
     "docdash": "^0.4.0",
     "eslint": "^4.7.2",
     "jsdoc": "^3.4.3",
@@ -37,7 +38,8 @@
     "prepublish": "nsp check",
     "pretest": "yarn run lint",
     "test": "yarn run test-only",
-    "test-only": "NODE_ENV=test nyc mocha test/helpers/loadMocks.js $(find test -name '*.spec.js')"
+    "test-only": "NODE_ENV=test nyc mocha test/helpers/loadMocks.js $(find test -name '*.spec.js')",
+    "posttest": "assert-version-bump"
   },
   "dependencies": {
     "avow": "^4.0.1",
