@@ -18,15 +18,14 @@ describe('dependencies', () => {
         forEach(filename =>
           it(`should be able to require ${filename.substring(ROOT_DIR.length)}`, () => {
             require(filename)
-          })
-        )(files)
+          }))(files)
       })
 
       done()
     })
   })
 
-  it('should have found some files', () =>
+  it('should have found some files', () => {
     assert(jsFiles.length > 0, 'no files found!')
-  )
+  })
 })
