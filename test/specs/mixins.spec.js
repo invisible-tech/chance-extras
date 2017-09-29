@@ -4,6 +4,7 @@ const assert = require('assert')
 const {
   includes,
   intersection,
+  isNaN,
   negate,
   startsWith,
 } = require('lodash/fp')

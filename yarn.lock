@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@invisible/eslint-config@^1.0.0":
+"@invisible/eslint-config@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@invisible/eslint-config/-/eslint-config-1.0.3.tgz#73d01bdc4f2bfe987dec52ad034b1c9d12b829ec"
   dependencies:
