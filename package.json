@@ -1,7 +1,7 @@
 {
   "name": "@invisible/chance-extras",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Singleton Chance, plus some mixins",
   "engines": {
     "node": "8.5.0"
@@ -19,7 +19,7 @@
   "keywords": [],
   "devDependencies": {
     "@invisible/eslint-config": "^1.0.3",
-    "@invisible/publish": "^1.1.1",
+    "@invisible/publish": "^1.1.6",
     "docdash": "^0.4.0",
     "eslint": "^4.7.2",
     "jsdoc": "^3.4.3",
