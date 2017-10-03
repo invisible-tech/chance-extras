@@ -1,4 +1,7 @@
 # @invisible/chance-extras
+
+[![CircleCI](https://circleci.com/gh/invisible-tech/chance-extras/tree/master.svg?style=svg)](https://circleci.com/gh/invisible-tech/chance-extras/tree/master)
+
 > Chance singleton with some mixins
 
 ## Install
