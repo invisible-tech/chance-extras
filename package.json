@@ -1,10 +1,10 @@
 {
   "name": "@invisible/chance-extras",
   "license": "MIT",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Singleton Chance, plus some mixins",
   "engines": {
-    "node": "8.5.0"
+    "node": "^8.5.0"
   },
   "homepage": "",
   "author": {
