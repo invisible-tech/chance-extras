@@ -1,10 +1,11 @@
 {
   "name": "@invisible/chance-extras",
   "license": "MIT",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Singleton Chance, plus some mixins",
   "engines": {
-    "node": "^8.5.0"
+    "node": ">=8.5.0",
+    "npm": ">=6.0.0"
   },
   "homepage": "",
   "author": {
@@ -19,29 +20,26 @@
   "keywords": [],
   "devDependencies": {
     "@invisible/eslint-config": "^1.1.2",
-    "@invisible/publish": "^1.1.6",
-    "docdash": "^0.4.0",
-    "eslint": "^4.7.2",
-    "jsdoc": "^3.4.3",
-    "mocha": "^3.2.0",
-    "nsp": "^2.6.3",
-    "nyc": "^10.3.0",
-    "recursive-readdir": "^2.1.1"
+    "@invisible/publish": "^2.0.4",
+    "eslint": "^5.11.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "recursive-readdir": "^2.2.2"
   },
   "repository": "git@github.com:invisible-tech/chance-extras.git",
   "scripts": {
-    "builddoc": "./node_modules/.bin/jsdoc -c ./.jsdoc.json",
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
-    "fix": "eslint --cache --fix scripts src test",
-    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty scripts src test",
-    "pretest": "yarn run lint",
-    "test": "yarn run test-only",
-    "test-only": "NODE_ENV=test nyc mocha test/helpers/loadMocks.js $(find test -name '*.spec.js')",
-    "posttest": "assert-version-bump && nsp check"
+    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty \"{scripts,src,test}/**/*.js\"",
+    "lint:fix": "npm run lint -- --fix",
+    "posttest": "assert-version-bump && assert-changelog-update && npm audit",
+    "pretest": "npm run lint",
+    "test": "npm run test-only",
+    "test-only": "NODE_ENV=test nyc mocha test/helpers/loadMocks.js $(find test -name '*.spec.js')"
   },
   "dependencies": {
-    "chance": "^1.0.6",
-    "lodash": "^4.17.4",
-    "moment": "^2.18.1"
+    "@invisible/changelog-update": "^1.2.2",
+    "chance": "^1.0.18",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0"
   }
 }
