@@ -41,5 +41,9 @@
     "chance": "^1.0.18",
     "lodash": "^4.17.11",
     "moment": "^2.23.0"
+  },
+  "changelogUpdate": {
+    "iconEmoji": "game_die",
+    "slackbotName": "Chance Extras"
   }
 }
